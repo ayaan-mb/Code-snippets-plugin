@@ -1,28 +1,29 @@
-# Code-snippets-plugin
+# ClickTrack Marketing Snippets (WordPress Plugin)
 
-## ClickTrack Marketing branding update
+This repository now contains a valid **installable WordPress plugin structure**.
 
-This repository now includes a reusable branding stylesheet and logo asset for a blue/black ClickTrack Marketing look and feel.
+## Plugin entry file
+- `clicktrack-marketing-snippets.php` (root)
+  - Includes WordPress plugin headers required for installation.
+  - Loads the plugin class and boots it.
 
-### Added files
-- `src/branding.css`
-  - Imports **Poppins** font.
-  - Applies dark blue/black full-width background treatment.
-  - Defines typography hierarchy with proper heading weights (`h1`/`h2`).
-  - Includes accent, card, and button styles aligned to the provided branding.
-- `src/logo-clicktrack-marketing.svg`
-  - Dark-themed ClickTrack Marketing logo placeholder for plugin header/footer usage.
+## Current branding assets
+- `assets/css/branding.css`
+  - Poppins font import.
+  - Blue/black dark theme variables.
+  - Full-width background styles.
+  - Improved typography hierarchy for `h1` and `h2`.
+- `assets/images/logo-clicktrack-marketing.svg`
+  - ClickTrack Marketing themed logo.
 
-### Quick usage
-1. Load the stylesheet in your plugin frontend:
-   ```html
-   <link rel="stylesheet" href="src/branding.css" />
-   ```
-2. Ensure your main wrapper uses one of these classes for full-width background:
-   - `plugin-root`
-   - `site-wrapper`
-   - `main`
-3. Replace existing logo references with:
-   - `src/logo-clicktrack-marketing.svg`
+## Runtime behavior
+- Frontend + WP Admin enqueue of the branding stylesheet.
+- Shortcode available:
+  - `[clicktrack_brand_logo]` → renders the ClickTrack logo SVG.
 
-If you share the actual plugin source files in this repo, the styles can be wired directly into each component/page.
+## Installation
+1. Zip this plugin folder.
+2. In WordPress Admin, go to **Plugins → Add New → Upload Plugin**.
+3. Upload zip and activate **ClickTrack Marketing Snippets**.
+
+If you want, I can next wire this branding into your existing plugin templates/pages directly (once those files are present in this repo).
